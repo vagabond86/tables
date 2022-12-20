@@ -27,7 +27,8 @@ public class Main {
             System.out.println("2. Nadpisz liczbę zapisaną pod konkretnym numerem komórki nową wartością");
             System.out.println("3. Wypisz liczby w takiej kolejności, w jakiej zostały podane");
             System.out.println("4. Wypisz liczby w odwrotnej kolejności");
-            System.out.println("5. Wyjdź z programu");
+            System.out.println("5. Sprawdź czy podana liczba znajduje się w tablicy");
+            System.out.println("6. Wyjdź z programu");
 
             int option = scanner.nextInt();
 
@@ -40,6 +41,14 @@ public class Main {
             } else if (option == 4) {
                 array.printInReverse();
             } else if (option == 5) {
+                System.out.println("Podaj liczbę do sprawdzenia:");
+                int number = scanner.nextInt();
+                if (array.contains(number)) {
+                    System.out.println("Liczba znajduje się w tablicy.");
+                } else {
+                    System.out.println("Liczba nie znajduje się w tablicy.");
+                }
+            } else if (option == 6) {
                 return;
             } else {
                 System.out.println("Nieprawidłowa opcja.");

@@ -53,5 +53,15 @@ public class ArrayOfNumbers {
         numbers[index] = number;
         System.out.println("Liczba zapisana pod numerem " + index + " została nadpisana nową wartością " + number + ".");
     }
+
+    public boolean contains(int number) {
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == number) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
+
 
